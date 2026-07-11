@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+/* ===== Reset ===== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'poppins';
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#F5F5F5;
+    color:#111827;
+}
+
+/* ===== Contact Section ===== */
+
+.contact{
+    width:100%;
+    min-height:100vh;
+    padding:80px 8%;
+    text-align:center;
+    font-family:'poppins';
+}
+
+.contact h5{
+    color:#2563EB;
+    font-size:18px;
+    letter-spacing:3px;
+    margin-bottom:10px;
+    font-family:'poppins';
+}
+
+.contact h1{
+    font-family:'Playfair Display',serif;
+    font-size:50px;
+    color:#001F3F;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    max-width:700px;
+    margin:0 auto 40px;
+    color:#64748B;
+    line-height:1.8;
+    font-family:'poppins';
+}
+
+/* ===== Layout ===== */
+
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+    font-family:'poppins';
+}
+
+/* ===== Contact Info ===== */
+
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+    font-family:'poppins';
+}
+
+.info-box{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    background:white;
+    padding:20px;
+    border-radius:18px;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+    transition:.4s;
+    font-family:'poppins';
+}
+
+.info-box:hover{
+    transform:translateY(-8px);
+    background:#EFF6FF;
+    box-shadow:0 15px 30px rgba(0,31,63,.3);
+}
+
+.info-box i{
+    width:70px;
+    height:70px;
+    background:#2563EB;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    transition:.3s;
+    
+}
+.info-box a{
+    color:#64748B;
+    text-decoration:none;
+}
+
+.info-box a:hover{
+    color:#2563EB;
+}
+.info-box:hover i{
+    background:#001F3F;
+    color:#D4AF37;
+}
+
+.info-box h3{
+    color:#001F3F;
+    margin-bottom:5px;
+}
+
+.info-box p{
+    color:#64748B;
+}
+
+/* ===== Social Icons ===== */
+
+.social-icons{
+    margin-top:20px;
+}
+
+.social-icons a{
+    width:50px;
+    height:50px;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    background:#2563EB;
+    color:white;
+    border-radius:50%;
+    margin:0 8px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    background:#001F3F;
+    color:#D4AF37;
+    transform:scale(1.1);
+}
+
+/* ===== Contact Form ===== */
+
+.contact-form{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+    font-family:'poppins';
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:18px;
+    border:2px solid #CBD5E1;
+    border-radius:10px;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+    font-family:'poppins';
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:#2563EB;
+}
+
+.contact-form button{
+    width:100%;
+    padding:15px;
+    border:none;
+    background:#001F3F;
+    color:white;
+    border-radius:10px;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact-form button:hover{
+    background:#2563EB;
+    box-shadow:0 10px 20px rgba(0,31,63,.4);
+}
+
+/* ===== Back Button ===== */
+
+.back-btn{
+    display:inline-block;
+    margin-top:50px;
+    padding:12px 28px;
+    background:#001F3F;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:600;
+    font-family:'poppins';
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#2563EB;
+    transform:translateY(-4px);
+    box-shadow:0 10px 20px rgba(0,31,63,.4);
+}
+
+/* ===== Responsive ===== */
+
+@media(max-width:768px){
+
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+
+    .contact-form{
+        margin-top:20px;
+    }
+
+}
+    </style>
+</head>
+<body>
+
+<section class="contact">
+
+    <h5>CONTACT ME</h5>
+    <h1>Get In Touch</h1>
+
+    <p class="subtitle">
+        Feel free to contact me for opportunities, collaborations or any queries.
+    </p>
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+
+            <div class="info-box">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                    <h3>Email</h3>
+                
+<a href="mailto:nagidibhagyasri10@gmail.com">
+    nagidibhagyasri10@gmail.com
+</a>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <h3>Phone</h3>
+                    <a href="tel:+917416195003">+91 7416195003</a>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <h3>Location</h3>
+        <a href="https://www.google.com/maps/search/?api=1&query=Ullipalem,Koduru,Mandal,Krishna,Andhra+Pradesh,India" target="_blank">
+            Ullipalem, Koduru Mandal, Krishna District, Andhra Pradesh, India
+        </a>
+    </div>
+
+            </div>
+
+            <div class="social-icons">
+                <a href="www.linkedin.com/in/bhagyasri-nagidi-31748b3b4" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/siri_2004_nagidi/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+        </div>
+
+        <div class="contact-form">
+
+            <form id="contact-form">
+                <p id="result"></p>
+<input type="text" name="user_name" placeholder="Your Name" required>
+
+<input type="email" name="user_email" placeholder="Your Email" required>
+
+<input type="text" name="subject" placeholder="Subject">
+
+<textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+               
+
+                <button type="submit">Send Message</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <a href="Index.html" class="back-btn">← Go Back Home</a>
+
+</section>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init({
+    publicKey: "EfuMtTneC9M17NMeS"
+});
+
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_ogifr8q",
+        "template_gnptyms",
+        this
+    )
+    .then(() => {
+        document.getElementById("result").innerHTML =
+            "<span style='color:green;'>Message Sent Successfully!</span>";
+        this.reset();
+    })
+    .catch((error) => {
+        document.getElementById("result").innerHTML =
+            "<span style='color:red;'>Failed to Send Message!</span>";
+        console.log(error);
+    });
+});
+</script>
+</body>
+</html>
