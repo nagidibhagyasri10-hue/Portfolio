@@ -1,355 +1,360 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>PORTFOLIO</title>
-    
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhagyasri Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <style>
-*{
+    *{
     margin:0;
     padding:0;
-     box-sizing:border-box;
-    font-family:'poppins',arial,Helvetica,sans-serif;
-}
-body{
-   /*background-color:#EEF6FF;
-    background:linear-gradient(to right,#FFFFFF,#F1F5F9);
-background:linear-gradient(135deg,#EFF6FF,#DBEAFE)*/
-background:linear-gradient(135deg,#FFFDF7,#F8F5F0);
-}
-.Middle{
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    text-align:center;
-    margin-top:200px;
-    margin-left:-60px;
-    text-decoration:none;
-    font-family:'poppins';
-}
-.Middle h1{
-    color:#0A192F;
-    font-size:80px;
-    font-family:'poppins';
-}
-.Middle h2{
-    color:#0A192F;
-    font-size:50px;
-    font-family:'poppoins';
-}
-.Middle h3{
-    display:flex;
-    font-family:'poppins';
-    justify-content:center;
-    text-align:center;
-    color:#4B5563;
-    font-size:25px;
-}
-.navbar{
-    position:absolute;
-    width: 250px;
-   height: 130vh;
-    top:0;
-    left:0;
-    background-color:/*#0A192F*/#0A192F ;
-    justify-content:space-between;
-    
-}
-.navbar p{
-    color:white;
-    padding:20px 20px 50px;
-    font-family:'poppins';
-    
-}
-.Top a{
-    color:#111827;
-    justify-content:space-between;
-    margin-left:20px;;
-    padding:20px;
-    flex-direction:column;
-    font-family:'poppins';
-}
-.navbar ul{
-    margin-left:15px;
-    text-decoration:none;
-    
-    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-.navbar ul li{
-    margin-bottom:20px;
-    list-style:none;
+body{
+    background:#f5f7fb;
+    color:#222;
 }
-.Top li a{
-    display:inline-block;
-    width:150px;
-    text-align:center;
-    padding:12px 20px;
-    text-decoration:none;
-    background: white;
-    border-style:solid;
-    border-color:#0A192F;
-    margin:10px 10px 10px 10px;
-    border-radius:8px;
-box-sizing:border-box;
-transition:0.2s;
-font-family:'poppins';
+
+.container{
+    display:flex;
+    min-height:100vh;
 }
-.Top li a i{
-    margin-right:8px;
-    font-size:16px;
-}
-.Top li a:hover{
+
+/* Sidebar */
+
+.sidebar{
+    width:260px;
+    background:#0A192F;
     color:white;
-    transform:scale(1.1);
+    padding:30px 20px;
+    position:fixed;
+    height:100%;
+}
+
+.profile{
+    text-align:center;
+}
+
+.profile img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    border:4px solid white;
+    object-fit:cover;
+}
+
+.profile h2{
+    margin-top:15px;
+}
+
+.profile p{
+    color:#ddd;
+    margin-top:8px;
+}
+
+.menu{
+    list-style:none;
+    margin-top:40px;
+}
+
+.menu li{
+    margin:15px 0;
+}
+
+.menu a{
+    display:block;
+    text-decoration:none;
+    color:white;
+    padding:12px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.menu a:hover,
+.menu a.active{
     background:#F59E0B;
 }
-.Middle a:hover{
- transform:scale(1.1);
- color:#F59E0B;
+
+.menu i{
+    margin-right:10px;
 }
-.resume-buttons{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-    padding:15px 30px;
+
+.social{
+    margin-top:40px;
+    text-align:center;
 }
-.btn{
-    
-    display:inline-block;
-   width:170px;
-   height:60px;
-   font-size:18px;
-    padding:15px 30px;
-    border-style:solid;
+
+.social a{
     color:white;
-    background:#0A192F;
-    border-color:#0A192F;
-    border-radius:10px;
-    justify-content:center;
-    align-items:center;
-    margin-top:20px;
-    text-decoration:none;
-    transition:0.5s;
-    font-family:'poppins';
-    
-    margin-right:100px;
-    
+    font-size:24px;
+    margin:0 12px;
+    transition:.3s;
 }
-.btn:hover{
-    box-shadow:0 0 15px #0A192F;
-    background-color:#0A192F;
-    transform:scale(1.1);
- color:#F59E0B;
+
+.social a:hover{
+    color:#F59E0B;
 }
-.btn.view-btn{
+
+.content{
+    margin-left:260px;
+    width:100%;
+    padding:50px;
+}
+
+.home{
     display:flex;
-    justify-content:center;
+    justify-content:space-between;
     align-items:center;
-    gap:20px;
-    margin-top:20px;
-    
-}
-.image img{
-    display:inline-block;
-    width:370px;
-    height:370px;
-    border-radius:50%;
-justify-content:content;
-margin:200px 200px 200px 1000px;
-margin-top:-400px;
-display:flex;
-padding:0px;
-text-align:center;
-border-color:#0A192F;
-border-style:solid;
-object-fit:cover;
-object-position:center top;
-
-} 
-.image img:hover{ 
-    box-shadow:0 0 25px #0A192F;
-    transform:scale(1.05)
+    gap:40px;
+    min-height:100vh;
 }
 
-.Middle{
+.home-text{
     flex:1;
 }
-.resume-buttons{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    margin-top:20px;
+
+.home-text h3{
+    font-size:28px;
+    color:#555;
 }
 
-.social-icons{
-    display:flex;
-    justify-content:center;
-    top:50px;
-    
-    gap:60px;
-    margin-top:-730px;
-    margin-left:1050px;
-    
-}
-
-.social-icons a{
-    font-size:20px;
+.home-text h1{
+    font-size:60px;
     color:#0A192F;
+    margin:10px 0;
+}
+
+.home-text h2{
+    font-size:30px;
+    color:#F59E0B;
+    margin-bottom:20px;
+}
+
+.home-text p{
+    line-height:1.8;
+    color:#555;
+}
+
+.buttons{
+    margin-top:30px;
+}
+    .btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:#0A192F;
+    color:white;
     text-decoration:none;
-    transition:0.3s;
-
+    border-radius:8px;
+    margin-right:15px;
+    transition:.3s;
 }
 
-.social-icons a:hover{
-    color:#2563EB;
-    transform:scale(1.2);
+.btn:hover{
+    background:#F59E0B;
+    color:white;
 }
 
-.home-description{
-    position: absolute;
-   /* bottom: 100px;*/
-    margin-top:650px;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 650px;
-    width: 90%;
-    text-align: center;
-    color:#1F2937;
-    font-size: 19px;
-    line-height: 1.8;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-
-    font-family:'poppins';
+.home-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
 }
-.home-description strong{
-    color: #4da6ff;
-    font-weight: 600;
-}
-    @media (max-width: 768px) {
 
-  .navbar{
+.home-image img{
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #0A192F;
+    transition:.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.home-image img:hover{
+    transform:scale(1.05);
+}
+
+/* Mobile Responsive */
+
+@media(max-width:992px){
+
+.sidebar{
+    position:relative;
     width:100%;
     height:auto;
-    position:relative;
-  }
+}
 
-  .Middle{
-    margin:20px;
-    text-align:center;
-  }
-
-  .Middle h1{
-    font-size:40px;
-  }
-
-  .Middle h2{
-    font-size:28px;
-  }
-
-  .Middle h3{
-    font-size:18px;
-  }
-
-  .image img{
-    width:220px;
-    height:220px;
-    margin:20px auto;
-    display:block;
-  }
-
-  .social-icons{
-    margin:20px 0;
-    justify-content:center;
-  }
-
-  .resume-buttons{
+.container{
     flex-direction:column;
-    align-items:center;
-  }
+}
 
-  .btn{
-    margin:10px 0;
-  }
+.content{
+    margin-left:0;
+    padding:30px;
+}
 
-  .home-description{
-    position:static;
-    transform:none;
-    margin:20px;
-  }
+.home{
+    flex-direction:column-reverse;
+    text-align:center;
+}
+
+.home-text h1{
+    font-size:40px;
+}
+
+.home-text h2{
+    font-size:24px;
+}
+
+.home-image img{
+    width:250px;
+    height:250px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+}
+
+@media(max-width:576px){
+
+.profile img{
+    width:120px;
+    height:120px;
+}
+
+.home-text h1{
+    font-size:32px;
+}
+
+.home-text h2{
+    font-size:20px;
+}
+
+.home-text h3{
+    font-size:20px;
+}
+
+.home-text p{
+    font-size:15px;
+}
+
+.btn{
+    width:100%;
+    text-align:center;
+}
+
+.social a{
+    font-size:22px;
+}
 
 }
 </style>
 </head>
+
 <body>
-    <div>
-    <div class="Middle">
-    <h2>Hi,I'm<br></h2><h1>Bhagya Sri</h1><br>
-    <h3 >Aspiring Java Full Stack Developer<br>Final Year B.Tech Student<br>
-        Passionate About Web Development</h3>
-        </div>
-        <div class="resume-buttons">
-    <a href="MyResume.pdf" target="_blank" class="btn">
-        View Resume
-    </a>
 
-    <a href="MyResume.pdf" download class="btn">
-        Download Resume
-    </a>
-</div>
-    </div>
-    
-</div>
-<div class="image">
-    <img src="BhagyaSriNagidi.jpeg" alt="My Photo">
+<div class="container">
+
+<!-- Sidebar -->
+<div class="sidebar">
+
+<div class="profile">
+<img src="BhagyaSriNagidi.jpeg" alt="Bhagyasri">
+<h2>Bhagya Sri</h2>
+<p>Java Full Stack Developer</p>
 </div>
 
-<!-- Social Media Icons -->
-<div class="social-icons">
+<ul class="menu">
+<li><a class="active" href="index.html"><i class="fa fa-home"></i> Home</a></li>
 
-    <a href="https://github.com/nagidibhagyasri10-hue" target="_blank">
-        <i class="fa-brands fa-github"></i>
-    </a>
+<li><a href="About.html"><i class="fa fa-user"></i> About</a></li>
 
-    <a href="https://www.linkedin.com/in/bhagyasri-nagidi-31748b3b4?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">
-        <i class="fa-brands fa-linkedin"></i>
-    </a>
+<li><a href="Skills.html"><i class="fa fa-code"></i> Skills</a></li>
 
-    <a href="mailto:nagidibhagyasri10@gmail.com">
-        <i class="fa-solid fa-envelope"></i>
-    </a>
+<li><a href="Projects.html"><i class="fa fa-laptop-code"></i> Projects</a></li>
+
+<li><a href="Certificates.html"><i class="fa fa-certificate"></i> Certificates</a></li>
+
+<li><a href="Education.html"><i class="fa fa-graduation-cap"></i> Education</a></li>
+
+<li><a href="Contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
+
+</ul>
+
+<div class="social">
+
+<a href="https://github.com/nagidibhagyasri10-hue" target="_blank">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/bhagyasri-nagidi-31748b3b4" target="_blank">
+<i class="fab fa-linkedin"></i>
+</a>
+
+<a href="mailto:nagidibhagyasri10@gmail.com">
+<i class="fa fa-envelope"></i>
+</a>
 
 </div>
-<p class="home-description">
-    I'm <strong>Bhagyasri Nagidi</strong>, a B.Tech Computer Science and Engineering student with a strong interest in Java Full Stack Development and Web Development. I enjoy building responsive, user-friendly websites and continuously improving my technical skills. My goal is to start my career as a Software Engineer in a reputed IT company and contribute through innovative and efficient solutions.
+
+</div>
+
+<!-- Home Section -->
+<div class="content">
+
+<section class="home">
+
+<div class="home-text">
+
+<h3>Hello, I'm</h3>
+
+<h1>Bhagya Sri Nagidi</h1>
+
+<h2>Aspiring Java Full Stack Developer</h2>
+
+<p>
+I am a B.Tech Computer Science and Engineering student passionate about
+Java Full Stack Development and Web Development. I enjoy creating modern,
+responsive websites and continuously improving my programming skills.
+My goal is to become a Software Engineer in a reputed IT company.
 </p>
-<!--<div class="image">
-    <img src="BhagyaSriNagidi.jpeg" alt="My Photo">
-</div>-->
-    
-    <section>
 
-<nav class="navbar">
-    
-    <p>PORTFOLIO</p>
-    <ul class="Top">
-       
-        <li><a href="index.html"><i class="fa-solid fa-house"></i><br> HOME</a></li>
-<li><a href="About.html" class="active"><i class="fa-solid fa-user"></i> <br>ABOUT</a></li>
-<li><a href="Skills.html" class="active"><i class="fa-solid fa-code"></i> <br>SKILLS</a></li>
-<li><a href="Projects.html" class="active"><i class="fa-solid fa-folder-open"></i> PROJECTS</a></li>
-<li><a href="Certificates.html" class="active"><i class="fa-solid fa-certificate"></i> CERTIFICATES</a></li>
-<li><a href="Education.html" class="active"><i class="fa-solid fa-school"></i> EDUCATION</a></li>
+<div class="buttons">
 
-<li><a href="Contact.html" class="active"><i class="fa-solid fa-phone"></i> <br>CONTACT</a></li>
-    </ul>
-</nav>
+<a href="MyResume.pdf" target="_blank" class="btn">
+View Resume
+</a>
+
+<a href="MyResume.pdf" download class="btn">
+Download Resume
+</a>
+
+</div>
+
+</div>
+
+<div class="home-image">
+
+<img src="BhagyaSriNagidi.jpeg" alt="Bhagyasri">
+
+</div>
+
 </section>
 
+</div>
+
+</div>
 
 </body>
 </html>
