@@ -9,7 +9,7 @@
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <style>
-    *{
+*{
     margin:0;
     padding:0;
     box-sizing:border-box;
@@ -31,31 +31,29 @@ body{
 .sidebar{
     width:260px;
     background:#0A192F;
-    color:white;
+    color:#fff;
     padding:30px 20px;
     position:fixed;
-    height:100%;
+    left:0;
+    top:0;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
 }
 
 .profile{
     text-align:center;
 }
 
-/*.profile img{
-    width:150px;
-    height:150px;
-    border-radius:50%;
-    border:4px solid white;
-    object-fit:cover;
-}*/
 .profile img{
     width:150px;
     height:150px;
     border-radius:50%;
-    border:4px solid white;
+    border:4px solid #fff;
     object-fit:cover;
     object-position:center top;
 }
+
 .profile h2{
     margin-top:15px;
 }
@@ -67,7 +65,8 @@ body{
 
 .menu{
     list-style:none;
-    margin-top:40px;
+    margin-top:35px;
+    flex:1;
 }
 
 .menu li{
@@ -77,10 +76,10 @@ body{
 .menu a{
     display:block;
     text-decoration:none;
-    color:white;
+    color:#fff;
     padding:12px;
     border-radius:8px;
-    transition:.3s;
+    transition:0.3s;
 }
 
 .menu a:hover,
@@ -93,43 +92,47 @@ body{
 }
 
 .social{
-    margin-top:40px;
     text-align:center;
+    margin-top:auto;
+    padding-bottom:20px;
 }
 
 .social a{
-    color:white;
-    font-size:24px;
-    margin:0 12px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:#1E293B;
+    color:#fff;
+    font-size:20px;
+    margin:0 8px;
     transition:.3s;
 }
 
 .social a:hover{
-    color:#F59E0B;
+    background:#F59E0B;
 }
+
+/* Content */
 
 .content{
     margin-left:260px;
-    width:100%;
+    width:calc(100% - 260px);
     padding:50px;
 }
 
-/*.home{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:40px;
-    min-height:100vh;
-}*/
+/* Home */
+
 .home{
     display:flex;
     justify-content:space-between;
-    align-items:flex-start;
-    gap:50px;
+    align-items:center;
+    gap:60px;
     min-height:100vh;
 }
- 
-  
+
 .home-text{
     flex:1;
 }
@@ -140,7 +143,7 @@ body{
 }
 
 .home-text h1{
-    font-size:60px;
+    font-size:58px;
     color:#0A192F;
     margin:10px 0;
 }
@@ -154,16 +157,18 @@ body{
 .home-text p{
     line-height:1.8;
     color:#555;
+    text-align:justify;
 }
 
 .buttons{
     margin-top:30px;
 }
-    .btn{
+
+.btn{
     display:inline-block;
     padding:12px 25px;
     background:#0A192F;
-    color:white;
+    color:#fff;
     text-decoration:none;
     border-radius:8px;
     margin-right:15px;
@@ -172,39 +177,15 @@ body{
 
 .btn:hover{
     background:#F59E0B;
-    color:white;
 }
+
 .home-image{
-    flex:0 0 350px;
+    flex:0 0 340px;
     display:flex;
     justify-content:flex-end;
-    align-items:flex-start;
-}/*
-.home-image{
-    flex:1;
-    display:flex;
-    justify-content:center;
-}*/
-/*
+}
+
 .home-image img{
-    width:250px;
-    height:250px;
-    border-radius:50%;
-    object-fit:cover;
-    border:5px solid #0A192F;
-    transition:.4s;
-    box-shadow:0 10px 25px rgba(0,0,0,.2);
-}*/
-/*.home-image img{
-    width:250px;
-    height:250px;
-    border-radius:50%;
-    object-fit:cover;
-    object-position:center 15%;
-    border:5px solid #0A192F;
-    box-shadow:0 10px 25px rgba(0,0,0,.2);
-}*/
-   .home-image img{
     width:320px;
     height:320px;
     border-radius:50%;
@@ -212,68 +193,64 @@ body{
     object-position:center 15%;
     border:5px solid #0A192F;
     box-shadow:0 10px 25px rgba(0,0,0,.2);
+    transition:.3s;
 }
+
 .home-image img:hover{
     transform:scale(1.05);
 }
 
-/* Mobile Responsive */
+/* Tablet */
 
-@media(max-width:992px){
+@media (max-width:992px){
 
 .sidebar{
     position:relative;
     width:100%;
     height:auto;
 }
-    .home{
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-}
-    
-   .home-image{
-    justify-content:center;
-    margin-bottom:25px;
-}
-    .home-image img{
-    width:220px;
-    height:220px;
-}
-.home-image{
-    order:1;
-    justify-content:center;
-}
 
-.home-text{
-    order:2;
-    text-align:center;
-}
 .container{
     flex-direction:column;
 }
 
 .content{
+    width:100%;
     margin-left:0;
-    padding:30px;
+    padding:30px 20px;
 }
 
 .home{
-    flex-direction:column-reverse;
+    flex-direction:column;
     text-align:center;
+    min-height:auto;
+}
+
+.home-image{
+    order:1;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+.home-text{
+    order:2;
+}
+
+.home-image img{
+    width:240px;
+    height:240px;
 }
 
 .home-text h1{
-    font-size:40px;
+    font-size:42px;
 }
 
 .home-text h2{
     font-size:24px;
 }
 
-.home-image img{
-    width:250px;
-    height:250px;
+.home-text p{
+    text-align:center;
 }
 
 .buttons{
@@ -283,15 +260,15 @@ body{
     gap:15px;
 }
 
-}
-.home-image{
-    order:2;
+.btn{
+    margin-right:0;
 }
 
-.home-text{
-    order:1;
 }
-@media(max-width:576px){
+
+/* Mobile */
+
+@media (max-width:576px){
 
 .profile img{
     width:120px;
@@ -314,140 +291,126 @@ body{
     font-size:15px;
 }
 
+.home-image img{
+    width:200px;
+    height:200px;
+}
+
 .btn{
     width:100%;
     text-align:center;
 }
 
 .social a{
-    font-size:22px;
+    width:40px;
+    height:40px;
+    font-size:18px;
 }
-
 }
 </style>
-</head>
 
 <body>
 
 <div class="container">
 
-<!-- Sidebar -->
-<div class="sidebar">
+    <!-- Sidebar -->
 
-<div class="profile">
-<img src="BhagyaSriNagidi.jpeg" alt="Bhagyasri">
-<h2>Bhagya Sri</h2>
-<p>Java Full Stack Developer</p>
-</div>
+    <div class="sidebar">
 
-<ul class="menu">
-<li><a class="active" href="index.html"><i class="fa fa-home"></i> Home</a></li>
+        <div class="profile">
 
-<li><a href="About.html"><i class="fa fa-user"></i> About</a></li>
+            <img src="BhagyaSriNagidi.jpeg" alt="Bhagya Sri">
 
-<li><a href="Skills.html"><i class="fa fa-code"></i> Skills</a></li>
+            <h2>Bhagya Sri</h2>
 
-<li><a href="Projects.html"><i class="fa fa-laptop-code"></i> Projects</a></li>
+            <p>Java Full Stack Developer</p>
 
-<li><a href="Certificates.html"><i class="fa fa-certificate"></i> Certificates</a></li>
+        </div>
 
-<li><a href="Education.html"><i class="fa fa-graduation-cap"></i> Education</a></li>
+        <ul class="menu">
 
-<li><a href="Contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
+            <li><a class="active" href="index.html"><i class="fa fa-home"></i> Home</a></li>
 
-</ul>
+            <li><a href="About.html"><i class="fa fa-user"></i> About</a></li>
 
-<div class="social">
+            <li><a href="Skills.html"><i class="fa fa-code"></i> Skills</a></li>
 
-<a href="https://github.com/nagidibhagyasri10-hue" target="_blank">
-<i class="fab fa-github"></i>
-</a>
+            <li><a href="Projects.html"><i class="fa fa-laptop-code"></i> Projects</a></li>
 
-<a href="https://www.linkedin.com/in/bhagyasri-nagidi-31748b3b4" target="_blank">
-<i class="fab fa-linkedin"></i>
-</a>
+            <li><a href="Certificates.html"><i class="fa fa-certificate"></i> Certificates</a></li>
 
-<a href="mailto:nagidibhagyasri10@gmail.com">
-<i class="fa fa-envelope"></i>
-</a>
+            <li><a href="Education.html"><i class="fa fa-graduation-cap"></i> Education</a></li>
 
-</div>
+            <li><a href="Contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
 
-</div>
+        </ul>
 
-<!-- Home Section -->
-<div class="content">
+        <div class="social">
 
-<section class="home">
+            <a href="https://github.com/nagidibhagyasri10-hue" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
 
-<div class="home-text">
-<!--
-<h3>Hello, I'm</h3>
+            <a href="https://www.linkedin.com/in/bhagyasri-nagidi-31748b3b4" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
 
-<h1>Bhagya Sri Nagidi</h1>
+            <a href="mailto:nagidibhagyasri10@gmail.com">
+                <i class="fa fa-envelope"></i>
+            </a>
 
-<h2>Aspiring Java Full Stack Developer</h2>
+        </div>
 
-<p>
-I am a B.Tech Computer Science and Engineering student passionate about
-Java Full Stack Development and Web Development. I enjoy creating modern,
-responsive websites and continuously improving my programming skills.
-My goal is to become a Software Engineer in a reputed IT company.
-</p>
+    </div>
 
-<div class="buttons">
-<a href="CV.jpeg" target="_blank" class="btn">
-    View Resume
-</a>
+    <!-- Content -->
 
-<a href="Resume.pdf" download class="btn">
-    Download Resume
-</a>
+    <div class="content">
 
-</div>
+        <section class="home">
 
-</div>
-<section class="home">
+            <div class="home-text">
 
-<div class="home-image">
-    <img src="BhagyaSriNagidi.jpeg" alt="Bhagyasri">
-</div>-->
+                <h3>Hello, I'm</h3>
 
-<div class="home-text">
+                <h1>Bhagya Sri Nagidi</h1>
 
-<h3>Hello, I'm</h3>
+                <h2>Aspiring Java Full Stack Developer</h2>
 
-<h1>Bhagya Sri Nagidi</h1>
+                <p>
+                    I am a B.Tech Computer Science and Engineering student passionate about
+                    Java Full Stack Development and Web Development. I enjoy creating modern,
+                    responsive websites and continuously improving my programming skills.
+                    My goal is to become a Software Engineer in a reputed IT company.
+                </p>
 
-<h2>Aspiring Java Full Stack Developer</h2>
+                <div class="buttons">
 
-<p>
-I am a B.Tech Computer Science and Engineering student passionate about
-Java Full Stack Development and Web Development. I enjoy creating modern,
-responsive websites and continuously improving my programming skills.
-My goal is to become a Software Engineer in a reputed IT company.
-</p>
+                    <a href="CV.jpeg" target="_blank" class="btn">
+                        View Resume
+                    </a>
 
-<div class="buttons">
-<a href="CV.jpeg" target="_blank" class="btn">View Resume</a>
+                    <a href="Resume.pdf" download class="btn">
+                        Download Resume
+                    </a>
 
-<a href="Resume.pdf" download class="btn">Download Resume</a>
-</div>
+                </div>
 
-</div>
+            </div>
 
-</section>
-<div class="home-image">
+            <div class="home-image">
 
-<img src="BhagyaSriNagidi.jpeg" alt="Bhagyasri">
+                <img src="BhagyaSriNagidi.jpeg" alt="Bhagya Sri">
 
-</div>
+            </div>
 
-</section>
+        </section>
 
-</div>
+    </div>
 
 </div>
 
 </body>
+</html>
+
 </html>
