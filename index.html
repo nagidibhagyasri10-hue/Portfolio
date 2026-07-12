@@ -92,12 +92,14 @@ body{
 }
 
 .social{
-    text-align:center;
     margin-top:auto;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    gap:15px;
     padding-bottom:20px;
 }
-
-.social a{
+/*.social a{
     display:inline-flex;
     align-items:center;
     justify-content:center;
@@ -108,6 +110,19 @@ body{
     color:#fff;
     font-size:20px;
     margin:0 8px;
+    transition:.3s;
+}*/
+    .social a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:#1E293B;
+    color:#fff;
+    font-size:20px;
+    text-decoration:none;
     transition:.3s;
 }
 
@@ -411,6 +426,6 @@ body{
 </div>
 
 </body>
-</html>
+
 
 </html>
