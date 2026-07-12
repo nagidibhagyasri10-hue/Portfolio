@@ -114,14 +114,22 @@ body{
     padding:50px;
 }
 
-.home{
+/*.home{
     display:flex;
     justify-content:space-between;
     align-items:center;
     gap:40px;
     min-height:100vh;
+}*/
+.home{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:50px;
+    min-height:100vh;
 }
-
+ 
+  
 .home-text{
     flex:1;
 }
@@ -166,12 +174,17 @@ body{
     background:#F59E0B;
     color:white;
 }
-
+.home-image{
+    flex:0 0 350px;
+    display:flex;
+    justify-content:flex-end;
+    align-items:flex-start;
+}/*
 .home-image{
     flex:1;
     display:flex;
     justify-content:center;
-}
+}*/
 /*
 .home-image img{
     width:250px;
@@ -182,9 +195,18 @@ body{
     transition:.4s;
     box-shadow:0 10px 25px rgba(0,0,0,.2);
 }*/
-.home-image img{
+/*.home-image img{
     width:250px;
     height:250px;
+    border-radius:50%;
+    object-fit:cover;
+    object-position:center 15%;
+    border:5px solid #0A192F;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}*/
+   .home-image img{
+    width:320px;
+    height:320px;
     border-radius:50%;
     object-fit:cover;
     object-position:center 15%;
@@ -204,7 +226,29 @@ body{
     width:100%;
     height:auto;
 }
+    .home{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+    
+   .home-image{
+    justify-content:center;
+    margin-bottom:25px;
+}
+    .home-image img{
+    width:220px;
+    height:220px;
+}
+.home-image{
+    order:1;
+    justify-content:center;
+}
 
+.home-text{
+    order:2;
+    text-align:center;
+}
 .container{
     flex-direction:column;
 }
@@ -240,7 +284,13 @@ body{
 }
 
 }
+.home-image{
+    order:2;
+}
 
+.home-text{
+    order:1;
+}
 @media(max-width:576px){
 
 .profile img{
@@ -331,7 +381,7 @@ body{
 <section class="home">
 
 <div class="home-text">
-
+<!--
 <h3>Hello, I'm</h3>
 
 <h1>Bhagya Sri Nagidi</h1>
@@ -356,8 +406,37 @@ My goal is to become a Software Engineer in a reputed IT company.
 
 </div>
 
+</div>-->
+<section class="home">
+
+<div class="home-image">
+    <img src="BhagyaSriNagidi.jpeg" alt="Bhagyasri">
 </div>
 
+<div class="home-text">
+
+<h3>Hello, I'm</h3>
+
+<h1>Bhagya Sri Nagidi</h1>
+
+<h2>Aspiring Java Full Stack Developer</h2>
+
+<p>
+I am a B.Tech Computer Science and Engineering student passionate about
+Java Full Stack Development and Web Development. I enjoy creating modern,
+responsive websites and continuously improving my programming skills.
+My goal is to become a Software Engineer in a reputed IT company.
+</p>
+
+<div class="buttons">
+<a href="CV.jpeg" target="_blank" class="btn">View Resume</a>
+
+<a href="Resume.pdf" download class="btn">Download Resume</a>
+</div>
+
+</div>
+
+</section>
 <div class="home-image">
 
 <img src="BhagyaSriNagidi.jpeg" alt="Bhagyasri">
