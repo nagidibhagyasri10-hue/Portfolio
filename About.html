@@ -1,291 +1,444 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>About Page</title>
+<html lang="en">
 
-        <meta name="viewport" content="width=initial-width,intial-scale:1.0">
-        <!--<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">-->
-        <style>
-            /* Google Font 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+<head>
 
- Reset */
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Page</title>
+
+
+<style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'poppins',sans-serif;
+    font-family:'Poppins',Arial,sans-serif;
 }
 
+
 body{
-    
-    font-family:'Poppins', sans-serif;
-background:linear-gradient(135deg,#FFFDF7,#F8F5F0);
-   
+    background:linear-gradient(135deg,#FFFDF7,#F8F5F0);
     color:#1E293B;
 }
 
+
 /* About Section */
+
 .about{
+
     width:100%;
     min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    padding:80px 8%;
+    padding:50px 20px;
+
 }
+
+
 
 .about-container{
+
+    width:100%;
+    max-width:1100px;
     display:flex;
-    justify-content:space-between;
+    justify-content:center;
     align-items:center;
-    gap:70px;
+    gap:50px;
     flex-wrap:wrap;
-    font-family:'poppins';
+
 }
+
+
 
 /* Image */
+
 .about-image img{
-    width:340px;
-    height:460px;
+
+    width:330px;
+    height:420px;
     border-radius:20px;
     object-fit:cover;
-   
-    border:5px  #0A192F;
-    box-shadow:0 15px 35px rgba(0,0,0,0.5);
+    border:5px solid #0A192F;
+    box-shadow:0 15px 35px rgba(0,0,0,0.3);
     transition:0.4s;
+
 }
+
 
 .about-image img:hover{
+
     transform:scale(1.05);
+
 }
+
+
 
 /* Content */
+
 .about-content{
+
     flex:1;
-    min-width:350px;
+    min-width:300px;
+
 }
 
+
 .about-content h4{
-    color:coral;
+
+    color:#F59E0B;
     font-size:18px;
     letter-spacing:2px;
     margin-bottom:10px;
-    font-family:'poppins';
+
 }
+
 
 .about-content h1{
-    font-family:'Poppins';
+
     font-size:50px;
+    color:#0A192F;
     margin-bottom:10px;
+
 }
 
+
+
 .about-content h3{
+
     font-size:26px;
     color:#475569;
     margin-bottom:20px;
-    font-family:'poppins';
+
 }
+
+
 
 .about-content p{
-    font-size:17px;
+
+    font-size:16px;
     line-height:1.8;
     color:#475569;
-    margin-bottom:18px;
-    font-family:'poppins';
+    margin-bottom:15px;
+    text-align:justify;
+
 }
+
+
 
 /* Details */
+
 .about-details{
+
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:18px;
+    gap:15px;
     margin-top:25px;
-    font-family:'poppins';
+
 }
-.details span{
-    font-family:'poppins';
-}
+
+
+
 .detail{
-    background:/*#ffffff*/#1E293B;
+
+    background:#1E293B;
     padding:15px;
     border-radius:12px;
+    transition:.3s;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:all 0.3s ease;
-    cursor:pointer;
-    font-family:'poppins';
-    
+
 }
 
+
+
 .detail span{
-    font-family:'poppins';
+
+    color:#F59E0B;
     font-weight:700;
-    color:/*#2563EB*/gold;
-    font-weight:600;
-    transition:color 0.3s ease;
+
 }
-.detail:hover span{
-    color:navy;
-}
-.details p,
-.detail span{
-    font-family:'poppins'/*,sans-serif! important*/;
-}
+
+
+
 .detail p{
-    margin-top:6px;
-    color:/*#1E293B*/white;
-    
+
+    color:white;
+    margin-top:5px;
+    font-size:14px;
+
 }
-.detail:hover p{
-    color:black;
-}
+
+
+
 .detail:hover{
-    transform:scale(1.05);
-    color:#DBEAFE;
+
     background:white;
+    transform:translateY(-5px);
+
 }
-/* Buttons */
-.about-buttons{
-    margin-top:35px;
+
+
+
+.detail:hover p{
+
+    color:#1E293B;
+
 }
+
+
+
+/* Button */
 
 .back-btn{
+
     display:inline-block;
     margin-top:30px;
     padding:12px 25px;
     background:#0A192F;
-    color:#fff;
+    color:white;
     text-decoration:none;
     border-radius:10px;
-    font-family:'Poppins';
-    font-weight:600;
-    transition:0.3s ease;
+    transition:.3s;
+
 }
+
+
 
 .back-btn:hover{
-    background:goldenrod;
-    color:white;
-    transform:translateY(-3px);
-    box-shadow:0 8px 20px rgba(37,99,235,0.3);
+
+    background:#F59E0B;
+
 }
-/* Responsive */
+
+
+
+/* Mobile Responsive */
+
 @media(max-width:768px){
 
-    .about-container{
-        flex-direction:column;
-        text-align:center;
-    }
 
-    .about-image img{
-        width:280px;
-        height:280px;
-    }
+.about{
 
-    .about-details{
-        grid-template-columns:1fr;
-    }
-
-    .about-buttons button{
-        margin-top:15px;
-        width:100%;
-    }
+    padding:30px 15px;
 
 }
-        </style>
-    </head>
-    <body>
-<section id="about" class="about">
 
-    <div class="about-container">
 
-        <!-- Left Side Image -->
-        <div class="about-image">
-            <img src="nagidi.jpeg" alt="Bhagya Sri">
-        </div>
 
-        <!-- Right Side Content -->
-        <div class="about-content">
+.about-container{
 
-            <h4>ABOUT ME</h4>
+    flex-direction:column;
+    text-align:center;
 
-            <h1>Bhagya Sri</h1>
+}
 
-            <h3>Aspiring Java Full Stack Developer</h3>
 
-            <p>
-                Hello! I'm <strong>Bhagya Sri</strong>, a Final Year B.Tech
-                Computer Science Engineering student with a strong passion for
-                Web Development and Java Full Stack Development.
-                I enjoy creating responsive, user-friendly websites and
-                continuously improving my programming skills.
-            </p>
 
-            <p>
-                I am currently learning HTML, CSS, JavaScript, React,
-                Java, SQL, and Spring Boot to build modern web applications.
-                My goal is to start my career as a Software Developer in a
-                reputed MNC where I can contribute and grow professionally.
-            </p>
+.about-image img{
 
-            <!-- Personal Details -->
+    width:220px;
+    height:280px;
 
-            <div class="about-details">
+}
 
-                <div class="detail">
-                    <span>Name :</span>
-                    <p>Bhagya Sri</p>
-                </div>
 
-                <div class="detail">
-                    <span>Qualification :</span>
-                    <p>B.Tech (CSE)</p>
-                </div>
 
-                <div class="detail">
-                    <span>College :</span>
-                    <p>Priyadarshini Institute of Technology and Science for Women</p>
-                </div>
+.about-content{
 
-                <div class="detail">
-                    <span>Branch :</span>
-                    <p>Computer Science Engineering</p>
-                </div>
+    width:100%;
 
-                <div class="detail">
-                    <span>Current Semester :</span>
-                    <p>4-1</p>
-                </div>
+}
 
-                <div class="detail">
-                    <span>Location :</span>
-                    <p>Koduru,Krishna District,Andhra Pradesh, India</p>
-                </div>
 
-                <div class="detail">
-                    <span>Email :</span>
-                    <p>nagidibhagyasri10@gmail.com</p>
-                </div>
 
-                <div class="detail">
-                    <span>Languages :</span>
-                    <p>English, Telugu</p>
-                </div>
+.about-content h1{
 
-            </div>
+    font-size:35px;
 
-            <!-- Buttons -->
+}
 
-            
-                   
-            <section id="Home">
-            <a href="index.html" class="back-btn" onclick="history.back()">← Go Back Home</a>
-            </section>
-        </div>
 
-    </div>
+
+.about-content h3{
+
+    font-size:20px;
+
+}
+
+
+
+.about-content p{
+
+    font-size:15px;
+    text-align:justify;
+
+}
+
+
+
+.about-details{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.detail{
+
+    text-align:left;
+
+}
+
+
+
+.back-btn{
+
+    width:100%;
+    text-align:center;
+
+}
+
+
+}
+
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<section class="about">
+
+
+<div class="about-container">
+
+
+
+<!-- Image -->
+
+<div class="about-image">
+
+<img src="nagidi.jpeg" alt="Bhagya Sri">
+
+</div>
+
+
+
+<!-- Content -->
+
+<div class="about-content">
+
+
+<h4>ABOUT ME</h4>
+
+
+<h1>Bhagya Sri</h1>
+
+
+<h3>Aspiring Java Full Stack Developer</h3>
+
+
+
+<p>
+
+Hello! I'm <b>Bhagya Sri</b>, a B.Tech Computer Science Engineering student
+with a strong passion for Web Development and Java Full Stack Development.
+I enjoy creating responsive, user-friendly websites and improving my coding skills.
+
+</p>
+
+
+
+<p>
+
+I am currently learning HTML, CSS, JavaScript, React,
+Java, SQL, and Spring Boot to build modern web applications.
+My goal is to become a Software Developer in a reputed IT company.
+
+</p>
+
+
+
+<div class="about-details">
+
+
+<div class="detail">
+<span>Name :</span>
+<p>Bhagya Sri</p>
+</div>
+
+
+<div class="detail">
+<span>Qualification :</span>
+<p>B.Tech (CSE)</p>
+</div>
+
+
+<div class="detail">
+<span>College :</span>
+<p>Priyadarshini Institute of Technology and Science for Women</p>
+</div>
+
+
+<div class="detail">
+<span>Branch :</span>
+<p>Computer Science Engineering</p>
+</div>
+
+
+<div class="detail">
+<span>Current Semester :</span>
+<p>3-2</p>
+</div>
+
+
+<div class="detail">
+<span>Location :</span>
+<p>Krishna District, Andhra Pradesh, India</p>
+</div>
+
+
+<div class="detail">
+<span>Email :</span>
+<p>nagidibhagyasri10@gmail.com</p>
+</div>
+
+
+<div class="detail">
+<span>Languages :</span>
+<p>English, Telugu</p>
+</div>
+
+
+</div>
+
+
+
+<a href="index.html" class="back-btn">
+← Go Back Home
+</a>
+
+
+
+</div>
+
+
+</div>
+
 
 </section>
-    </body>
+
+
+</body>
+
 </html>
